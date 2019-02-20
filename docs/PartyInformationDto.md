@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **email** | **str** |  | [optional] 
 **phone** | **str** |  | [optional] 
 **contact_person_name** | **str** |  | [optional] 
+**award_identifier** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

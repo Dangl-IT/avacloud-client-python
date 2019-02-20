@@ -24,6 +24,7 @@ Name | Type | Description | Notes
 **item_number** | [**ItemNumberDto**](ItemNumberDto.md) |  | [optional] 
 **element_type** | **str** |  | [optional] 
 **is_lot** | **bool** |  | 
+**alternative_to** | **str** |  | [optional] 
 **type** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

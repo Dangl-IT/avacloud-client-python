@@ -34,6 +34,8 @@ Name | Type | Description | Notes
 **quantity_assignments** | [**list[QuantityAssignmentDto]**](QuantityAssignmentDto.md) |  | [optional] 
 **commerce_properties** | [**CommercePropertiesDto**](CommercePropertiesDto.md) |  | [optional] 
 **alternative_to** | **str** |  | [optional] 
+**is_lump_sum** | **bool** |  | 
+**repetition_to** | **str** |  | [optional] 
 **type** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

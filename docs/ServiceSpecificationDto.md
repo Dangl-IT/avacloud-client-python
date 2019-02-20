@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **total_price_gross_deducted** | **float** |  | 
 **price_type** | [**PriceTypeDto**](PriceTypeDto.md) |  | 
 **bidder** | [**PartyInformationDto**](PartyInformationDto.md) |  | [optional] 
+**bidder_discriminator** | **str** |  | [optional] 
 **gaeb_xml_id** | **str** |  | [optional] 
 **project_information** | **object** |  | [optional] 
 **exchange_phase** | [**ExchangePhaseDto**](ExchangePhaseDto.md) |  | 
@@ -33,6 +34,14 @@ Name | Type | Description | Notes
 **name** | **str** |  | [optional] 
 **price_information** | [**PriceInformationDto**](PriceInformationDto.md) |  | [optional] 
 **project_catalogues** | [**list[CatalogueDto]**](CatalogueDto.md) |  | [optional] 
+**planned_execution_start** | **datetime** |  | 
+**planned_execution_end** | **datetime** |  | 
+**contract_date** | **datetime** |  | 
+**contract_identifier** | **str** |  | [optional] 
+**warranty_duration** | [**WarrantyDurationDto**](WarrantyDurationDto.md) |  | [optional] 
+**warranty_end** | **datetime** |  | 
+**approval_date** | **datetime** |  | 
+**type_of_approval** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
