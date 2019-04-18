@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**gaeb_conversion_convert_to_ava**](GaebConversionApi.md#gaeb_conversion_convert_to_ava) | **POST** /conversion/gaeb/ava | Converts GAEB files to Dangl.AVA projects
 [**gaeb_conversion_convert_to_excel**](GaebConversionApi.md#gaeb_conversion_convert_to_excel) | **POST** /conversion/gaeb/excel | Converts GAEB files to Excel
 [**gaeb_conversion_convert_to_gaeb**](GaebConversionApi.md#gaeb_conversion_convert_to_gaeb) | **POST** /conversion/gaeb/gaeb | Converts GAEB files to GAEB files. Used for example when transforming or repairing GAEB files.
+[**gaeb_conversion_convert_to_oenorm**](GaebConversionApi.md#gaeb_conversion_convert_to_oenorm) | **POST** /conversion/gaeb/oenorm | Converts GAEB files to Oenorm files
 
 
 # **gaeb_conversion_convert_to_ava**
@@ -157,6 +158,60 @@ Name | Type | Description  | Notes
  **gaeb_file** | **file**| The input file | [optional] 
  **destination_gaeb_type** | **str**| Defaults to GAEB XML V3.2 | [optional] 
  **target_exchange_phase_transform** | **str**| Defaults to none, meaning no transformation will be done | [optional] 
+
+### Return type
+
+[**file**](file.md)
+
+### Authorization
+
+[Dangl.Identity](../README.md#Dangl.Identity)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **gaeb_conversion_convert_to_oenorm**
+> file gaeb_conversion_convert_to_oenorm(gaeb_file=gaeb_file, destination_oenorm_type=destination_oenorm_type, try_repair_project_structure=try_repair_project_structure)
+
+Converts GAEB files to Oenorm files
+
+### Example
+```python
+from __future__ import print_function
+import time
+import avacloud_client_python
+from avacloud_client_python.rest import ApiException
+from pprint import pprint
+
+# Configure OAuth2 access token for authorization: Dangl.Identity
+configuration = avacloud_client_python.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = avacloud_client_python.GaebConversionApi(avacloud_client_python.ApiClient(configuration))
+gaeb_file = '/path/to/file.txt' # file | The input file (optional)
+destination_oenorm_type = 'destination_oenorm_type_example' # str | Defaults to Lv2015 (optional)
+try_repair_project_structure = true # bool | Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
+
+try:
+    # Converts GAEB files to Oenorm files
+    api_response = api_instance.gaeb_conversion_convert_to_oenorm(gaeb_file=gaeb_file, destination_oenorm_type=destination_oenorm_type, try_repair_project_structure=try_repair_project_structure)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling GaebConversionApi->gaeb_conversion_convert_to_oenorm: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **gaeb_file** | **file**| The input file | [optional] 
+ **destination_oenorm_type** | **str**| Defaults to Lv2015 | [optional] 
+ **try_repair_project_structure** | **bool**| Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target | [optional] 
 
 ### Return type
 
