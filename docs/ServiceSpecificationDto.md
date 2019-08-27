@@ -3,36 +3,36 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **str** | Elements GUID identifier.              | 
-**project_hourly_wage** | **float** | The hourly wage that is used within this ElementContainerBase. Will be propagated to child elements.              | 
-**project_tax_rate** | **float** | The tax rate that is used within this ElementContainerBase. Will be propagated to child elements.              | 
-**project_price_components** | **list[str]** | The price components that are used within this project. They are ignored during Json deserialization because they will be set from the parent project.              | [optional] 
-**project_item_number_schema** | [**ItemNumberSchemaDto**](ItemNumberSchemaDto.md) | The ItemNumberSchema that is used within this project.              | [optional] 
-**elements** | [**list[IElementDto]**](IElementDto.md) | The IElements within this ElementContainerBase.              | [optional] 
-**project_labour_time_label** | **str** | The label used in the parent Project to mark labour time, e.g. \&quot;Hours\&quot; or \&quot;Stunden\&quot;.              | [optional] 
-**contains_duplicate_item_numbers** | **bool** | Indicates if there are child IElements that have conflicting, duplicated ItemNumbers or if any child ElementContainerBase elements themselves contain duplicate ItemNumber s. Will always indicate false when told to ignore duplicate item numbers.              | 
-**ignore_duplicate_item_numbers** | **bool** | Indicate if duplicated ItemNumbers within child elements are to be ignored. Will not perform checks for duplicates if yes.              | 
-**total_price_gross_by_tax_rate** | [**list[GrossPriceComponentDto]**](GrossPriceComponentDto.md) | Price composition by tax rate.              | [optional] 
-**ignore_child_price_updates** | **bool** | Internally used to indicate that a propagation is currently done, this is done to not recalculate every single result from a lot of changes when it is sufficient to calculate the total price at once.              | 
-**deducted_price** | **float** | Net price after applied deductions.              | 
-**deduction_factor** | **float** | Factor of applied deductions to the total price. For example, \&quot;0.03\&quot; means that a 3% deduction is to be applied.              | 
-**total_price** | **float** | Will return this ElementContainerBase&#39;s total price.              | 
-**total_price_gross** | **float** | The total gross price for this ElementContainerBase including all child elements.              | 
-**total_price_gross_deducted** | **float** | Total gross price after applied deductions.              | 
-**price_type** | [**PriceTypeDto**](PriceTypeDto.md) | Indicates the PriceType of this ElementContainerBase, whether it should factor into total costs or not.              | 
-**bidder** | [**PartyInformationDto**](PartyInformationDto.md) | Information about the bidder.              | [optional] 
+**id** | **str** | Elements GUID identifier. | 
+**project_hourly_wage** | **float** | The hourly wage that is used within this ElementContainerBase. Will be propagated to child elements. | 
+**project_tax_rate** | **float** | The tax rate that is used within this ElementContainerBase. Will be propagated to child elements. | 
+**project_price_components** | **list[str]** | The price components that are used within this project. They are ignored during Json deserialization because they will be set from the parent project. | [optional] 
+**project_item_number_schema** | [**ItemNumberSchemaDto**](ItemNumberSchemaDto.md) | The ItemNumberSchema that is used within this project. | [optional] 
+**elements** | [**list[IElementDto]**](IElementDto.md) | The IElements within this ElementContainerBase. | [optional] 
+**project_labour_time_label** | **str** | The label used in the parent Project to mark labour time, e.g. \&quot;Hours\&quot; or \&quot;Stunden\&quot;. | [optional] 
+**contains_duplicate_item_numbers** | **bool** | Indicates if there are child IElements that have conflicting, duplicated ItemNumbers or if any child ElementContainerBase elements themselves contain duplicate ItemNumber s. Will always indicate false when told to ignore duplicate item numbers. | 
+**ignore_duplicate_item_numbers** | **bool** | Indicate if duplicated ItemNumbers within child elements are to be ignored. Will not perform checks for duplicates if yes. | 
+**total_price_gross_by_tax_rate** | [**list[GrossPriceComponentDto]**](GrossPriceComponentDto.md) | Price composition by tax rate. | [optional] 
+**ignore_child_price_updates** | **bool** | Internally used to indicate that a propagation is currently done, this is done to not recalculate every single result from a lot of changes when it is sufficient to calculate the total price at once. | 
+**deducted_price** | **float** | Net price after applied deductions. | 
+**deduction_factor** | **float** | Factor of applied deductions to the total price. For example, \&quot;0.03\&quot; means that a 3% deduction is to be applied. | 
+**total_price** | **float** | Will return this ElementContainerBase&#39;s total price. | 
+**total_price_gross** | **float** | The total gross price for this ElementContainerBase including all child elements. | 
+**total_price_gross_deducted** | **float** | Total gross price after applied deductions. | 
+**price_type** | [**PriceTypeDto**](PriceTypeDto.md) | Indicates the PriceType of this ElementContainerBase, whether it should factor into total costs or not. | 
+**bidder** | [**PartyInformationDto**](PartyInformationDto.md) | Information about the bidder. | [optional] 
 **bidder_discriminator** | **str** | This discriminator is used to identify different bidders in a project. It is different from the Identifier property in the Bidder in that the BidderDiscriminator is intended to be a numerical identifier within a project, while the Identifier does uniquely identify a bidder in the system independent of a specific project. This property should map to \&quot;Bieternummer\&quot; or \&quot;BidderNo\&quot; in GAEB. | [optional] 
-**gaeb_xml_id** | **str** | This is used to store the GAEB XML Id within this ServiceSpecification. This data is not used for any calculations or evaluations but only for GAEB serialization and deserialization.              | [optional] 
-**project_information** | [**ProjectInformationDto**](ProjectInformationDto.md) | The ProjectInformation used within the Project in which this ElementContainerBase is contained. This is reference equal to the ProjectInformation used in the parent project.              | [optional] 
-**exchange_phase** | [**ExchangePhaseDto**](ExchangePhaseDto.md) | This service specifications exchange phase, i.e. the current status in the project it is intended to be used (such as request for offer, offer, awarding...).              | 
-**origin** | [**OriginDto**](OriginDto.md) | This indicates where the service specification originates, i.e. from an exchange file format or self created.              | 
-**creation_date** | **datetime** | Creation date of this ServiceSpecification.              | 
-**offer_by_date** | **datetime** | Date indicating until when an offer has to be submitted. In German, this is often called the \&quot;Eröffnungstermin\&quot;              | 
-**decision_date** | **datetime** | Date indicating by when the buyer will select a contractor.              | 
-**submission_location** | **str** | String indicating where the physical submission of the offer is taking place.              | [optional] 
-**description** | **str** | Description of this ServiceSpecification.              | [optional] 
-**name** | **str** | The name of this ServiceSpecification.              | [optional] 
-**price_information** | [**PriceInformationDto**](PriceInformationDto.md) | This PriceInformation contains global data for the ServiceSpecification. When inside a Project, do not set this property manually.              | [optional] 
+**gaeb_xml_id** | **str** | This is used to store the GAEB XML Id within this ServiceSpecification. This data is not used for any calculations or evaluations but only for GAEB serialization and deserialization. | [optional] 
+**project_information** | [**ProjectInformationDto**](ProjectInformationDto.md) | The ProjectInformation used within the Project in which this ElementContainerBase is contained. This is reference equal to the ProjectInformation used in the parent project. | [optional] 
+**exchange_phase** | [**ExchangePhaseDto**](ExchangePhaseDto.md) | This service specifications exchange phase, i.e. the current status in the project it is intended to be used (such as request for offer, offer, awarding...). | 
+**origin** | [**OriginDto**](OriginDto.md) | This indicates where the service specification originates, i.e. from an exchange file format or self created. | 
+**creation_date** | **datetime** | Creation date of this ServiceSpecification. | 
+**offer_by_date** | **datetime** | Date indicating until when an offer has to be submitted. In German, this is often called the \&quot;Eröffnungstermin\&quot; | 
+**decision_date** | **datetime** | Date indicating by when the buyer will select a contractor. | 
+**submission_location** | **str** | String indicating where the physical submission of the offer is taking place. | [optional] 
+**description** | **str** | Description of this ServiceSpecification. | [optional] 
+**name** | **str** | The name of this ServiceSpecification. | [optional] 
+**price_information** | [**PriceInformationDto**](PriceInformationDto.md) | This PriceInformation contains global data for the ServiceSpecification. When inside a Project, do not set this property manually. | [optional] 
 **project_catalogues** | [**list[CatalogueDto]**](CatalogueDto.md) | These are Catalogues that are used within this ServiceSpecification. Catalogues are used to describe catalogues, or collections, that can be used to describe elements with commonly known properties. For example, QuantityAssignments use these to categorize themselves. They are propagate to all child elements, e.g. other containers and QuantityAssignments. | [optional] 
 **planned_execution_start** | **datetime** | The date when the execution of the services is scheduled to start | 
 **planned_execution_end** | **datetime** | The date then the execution of the services is scheduled to be finished | 

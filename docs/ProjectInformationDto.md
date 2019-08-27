@@ -3,16 +3,16 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**buyer** | [**PartyInformationDto**](PartyInformationDto.md) | Information about the buyer.              | [optional] 
-**description** | **str** | Description for the project.              | [optional] 
-**description_short** | **str** | Short description for the project.              | [optional] 
-**name** | **str** | Name of the project.              | [optional] 
-**site** | [**PartyInformationDto**](PartyInformationDto.md) | Information about the site.              | [optional] 
-**item_number_schema** | [**ItemNumberSchemaDto**](ItemNumberSchemaDto.md) | The ItemNumberSchema used in the project.              | [optional] 
-**currency_short** | **str** | Short label for the currency used.              | [optional] 
-**currency_long** | **str** | Full label of the currency used.              | [optional] 
-**labour_time_label** | **str** | Label for the labour time part of prices used in the project.              | [optional] 
-**price_components** | **list[str]** | Labels for the price components used in the project. Caution: Removal of a price component will trigger to have dependent price informations be deleted in IElements that use this property.              | [optional] 
+**buyer** | [**PartyInformationDto**](PartyInformationDto.md) | Information about the buyer. | [optional] 
+**description** | **str** | Description for the project. | [optional] 
+**description_short** | **str** | Short description for the project. | [optional] 
+**name** | **str** | Name of the project. | [optional] 
+**site** | [**PartyInformationDto**](PartyInformationDto.md) | Information about the site. | [optional] 
+**item_number_schema** | [**ItemNumberSchemaDto**](ItemNumberSchemaDto.md) | The ItemNumberSchema used in the project. | [optional] 
+**currency_short** | **str** | Short label for the currency used. | [optional] 
+**currency_long** | **str** | Full label of the currency used. | [optional] 
+**labour_time_label** | **str** | Label for the labour time part of prices used in the project. | [optional] 
+**price_components** | **list[str]** | Labels for the price components used in the project. Caution: Removal of a price component will trigger to have dependent price informations be deleted in IElements that use this property. | [optional] 
 **bidder_comment_allowed** | **bool** | This bool indicates if this project allows the bidder to add bidder comments. Bidder comments are a way to attach clarifying information when submitting an offer. | 
 **side_offers_allowed** | **bool** | This property indicates if the project should allow side offers from contractors. In GAEB, a side offer would typically be in exchange phase 85. | 
 **award_type** | [**AwardTypeDto**](AwardTypeDto.md) | This enumeration describes the type of the award / procurement process. If this is used in a GAEB context, more information about award types can be found in the German VOB/A rules and the GAEB standard | 

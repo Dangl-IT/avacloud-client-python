@@ -4,12 +4,67 @@ All URIs are relative to *https://avacloud-api.dangl-it.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**ava_conversion_convert_to_ava**](AvaConversionApi.md#ava_conversion_convert_to_ava) | **POST** /conversion/ava/ava | Converts Dangl.AVA projects to Dangl.AVA. This is useful when you want to generate the calculated properties.
 [**ava_conversion_convert_to_excel**](AvaConversionApi.md#ava_conversion_convert_to_excel) | **POST** /conversion/ava/excel | Converts Dangl.AVA projects to Excel
 [**ava_conversion_convert_to_gaeb**](AvaConversionApi.md#ava_conversion_convert_to_gaeb) | **POST** /conversion/ava/gaeb | Converts Dangl.AVA projects to GAEB
 [**ava_conversion_convert_to_oenorm**](AvaConversionApi.md#ava_conversion_convert_to_oenorm) | **POST** /conversion/ava/oenorm | Converts Dangl.AVA projects to Oenorm
 [**ava_conversion_convert_to_reb**](AvaConversionApi.md#ava_conversion_convert_to_reb) | **POST** /conversion/ava/reb | Converts Dangl.AVA projects to REB
 [**ava_conversion_convert_to_sia**](AvaConversionApi.md#ava_conversion_convert_to_sia) | **POST** /conversion/ava/sia | Converts Dangl.AVA projects to SIA 451
 
+
+# **ava_conversion_convert_to_ava**
+> ProjectDto ava_conversion_convert_to_ava(ava_project, remove_plain_text_long_texts=remove_plain_text_long_texts, remove_html_long_texts=remove_html_long_texts)
+
+Converts Dangl.AVA projects to Dangl.AVA. This is useful when you want to generate the calculated properties.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import avacloud_client_python
+from avacloud_client_python.rest import ApiException
+from pprint import pprint
+
+# Configure OAuth2 access token for authorization: Dangl.Identity
+configuration = avacloud_client_python.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = avacloud_client_python.AvaConversionApi(avacloud_client_python.ApiClient(configuration))
+ava_project = avacloud_client_python.ProjectDto() # ProjectDto | The Dangl.AVA project
+remove_plain_text_long_texts = true # bool | If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+remove_html_long_texts = true # bool | If set to true, html long texts will be removed from the output to reduce response sizes (optional)
+
+try:
+    # Converts Dangl.AVA projects to Dangl.AVA. This is useful when you want to generate the calculated properties.
+    api_response = api_instance.ava_conversion_convert_to_ava(ava_project, remove_plain_text_long_texts=remove_plain_text_long_texts, remove_html_long_texts=remove_html_long_texts)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AvaConversionApi->ava_conversion_convert_to_ava: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ava_project** | [**ProjectDto**](ProjectDto.md)| The Dangl.AVA project | 
+ **remove_plain_text_long_texts** | **bool**| If set to true, plain text long texts will be removed from the output to reduce response sizes | [optional] 
+ **remove_html_long_texts** | **bool**| If set to true, html long texts will be removed from the output to reduce response sizes | [optional] 
+
+### Return type
+
+[**ProjectDto**](ProjectDto.md)
+
+### Authorization
+
+[Dangl.Identity](../README.md#Dangl.Identity)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
+ - **Accept**: application/vnd.com.dangl-it.ProjectDto.v1+json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **ava_conversion_convert_to_excel**
 > file ava_conversion_convert_to_excel(ava_project, write_prices=write_prices, write_long_texts=write_long_texts, conversion_culture=conversion_culture)

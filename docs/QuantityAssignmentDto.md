@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **str** | Elements GUID identifier.              | 
+**id** | **str** | Elements GUID identifier. | 
 **quantity** | **float** | The total quantity in this quantity assignment | 
 **project_catalogues** | [**list[CatalogueDto]**](CatalogueDto.md) | These are Catalogue that are used within this ServiceSpecification. Catalogue references are used to describe catalogues, or collections, that can be used to describe elements with commonly known properties. For example, QuantityAssignments use these to categorize themselves. | [optional] 
 **catalogue_references** | [**list[CatalogueReferenceDto]**](CatalogueReferenceDto.md) | Referenced catalogues for this QuantityAssignment. | [optional] 
