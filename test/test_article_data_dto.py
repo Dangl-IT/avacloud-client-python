@@ -16,12 +16,12 @@ from __future__ import absolute_import
 import unittest
 
 import avacloud_client_python
-from avacloud_client_python.models.item_number_schema_tier_dto import ItemNumberSchemaTierDto  # noqa: E501
+from avacloud_client_python.models.article_data_dto import ArticleDataDto  # noqa: E501
 from avacloud_client_python.rest import ApiException
 
 
-class TestItemNumberSchemaTierDto(unittest.TestCase):
-    """ItemNumberSchemaTierDto unit test stubs"""
+class TestArticleDataDto(unittest.TestCase):
+    """ArticleDataDto unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,10 +29,10 @@ class TestItemNumberSchemaTierDto(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testItemNumberSchemaTierDto(self):
-        """Test ItemNumberSchemaTierDto"""
+    def testArticleDataDto(self):
+        """Test ArticleDataDto"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = avacloud_client_python.models.item_number_schema_tier_dto.ItemNumberSchemaTierDto()  # noqa: E501
+        # model = avacloud_client_python.models.article_data_dto.ArticleDataDto()  # noqa: E501
         pass
 
 
