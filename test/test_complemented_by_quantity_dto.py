@@ -16,12 +16,12 @@ from __future__ import absolute_import
 import unittest
 
 import avacloud_client_python
-from avacloud_client_python.models.catalogue_reference_dto import CatalogueReferenceDto  # noqa: E501
+from avacloud_client_python.models.complemented_by_quantity_dto import ComplementedByQuantityDto  # noqa: E501
 from avacloud_client_python.rest import ApiException
 
 
-class TestCatalogueReferenceDto(unittest.TestCase):
-    """CatalogueReferenceDto unit test stubs"""
+class TestComplementedByQuantityDto(unittest.TestCase):
+    """ComplementedByQuantityDto unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,10 +29,10 @@ class TestCatalogueReferenceDto(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testCatalogueReferenceDto(self):
-        """Test CatalogueReferenceDto"""
+    def testComplementedByQuantityDto(self):
+        """Test ComplementedByQuantityDto"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = avacloud_client_python.models.catalogue_reference_dto.CatalogueReferenceDto()  # noqa: E501
+        # model = avacloud_client_python.models.complemented_by_quantity_dto.ComplementedByQuantityDto()  # noqa: E501
         pass
 
 

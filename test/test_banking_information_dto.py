@@ -16,12 +16,12 @@ from __future__ import absolute_import
 import unittest
 
 import avacloud_client_python
-from avacloud_client_python.models.catalogue_reference_dto import CatalogueReferenceDto  # noqa: E501
+from avacloud_client_python.models.banking_information_dto import BankingInformationDto  # noqa: E501
 from avacloud_client_python.rest import ApiException
 
 
-class TestCatalogueReferenceDto(unittest.TestCase):
-    """CatalogueReferenceDto unit test stubs"""
+class TestBankingInformationDto(unittest.TestCase):
+    """BankingInformationDto unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,10 +29,10 @@ class TestCatalogueReferenceDto(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testCatalogueReferenceDto(self):
-        """Test CatalogueReferenceDto"""
+    def testBankingInformationDto(self):
+        """Test BankingInformationDto"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = avacloud_client_python.models.catalogue_reference_dto.CatalogueReferenceDto()  # noqa: E501
+        # model = avacloud_client_python.models.banking_information_dto.BankingInformationDto()  # noqa: E501
         pass
 
 

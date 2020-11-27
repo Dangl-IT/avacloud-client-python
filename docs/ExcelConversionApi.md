@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
- - **Accept**: application/vnd.com.dangl-it.ProjectDto.v1+json
+ - **Accept**: application/vnd.com.dangl-it.ProjectDto.v1+json, application/problem+json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -124,12 +124,12 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/problem+json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **excel_conversion_convert_to_gaeb**
-> file excel_conversion_convert_to_gaeb(excel_file=excel_file, read_new_elements=read_new_elements, rebuild_item_number_schema=rebuild_item_number_schema, destination_gaeb_type=destination_gaeb_type, target_exchange_phase_transform=target_exchange_phase_transform)
+> file excel_conversion_convert_to_gaeb(excel_file=excel_file, read_new_elements=read_new_elements, rebuild_item_number_schema=rebuild_item_number_schema, destination_gaeb_type=destination_gaeb_type, target_exchange_phase_transform=target_exchange_phase_transform, enforce_strict_offer_phase_long_text_output=enforce_strict_offer_phase_long_text_output)
 
 Converts Excel files to GAEB files.
 
@@ -152,10 +152,11 @@ read_new_elements = true # bool | Defaults to false (optional)
 rebuild_item_number_schema = true # bool | When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
 destination_gaeb_type = 'destination_gaeb_type_example' # str | Defaults to GAEB XML V3.2 (optional)
 target_exchange_phase_transform = 'target_exchange_phase_transform_example' # str | Defaults to none, meaning no transformation will be done (optional)
+enforce_strict_offer_phase_long_text_output = true # bool | Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
 
 try:
     # Converts Excel files to GAEB files.
-    api_response = api_instance.excel_conversion_convert_to_gaeb(excel_file=excel_file, read_new_elements=read_new_elements, rebuild_item_number_schema=rebuild_item_number_schema, destination_gaeb_type=destination_gaeb_type, target_exchange_phase_transform=target_exchange_phase_transform)
+    api_response = api_instance.excel_conversion_convert_to_gaeb(excel_file=excel_file, read_new_elements=read_new_elements, rebuild_item_number_schema=rebuild_item_number_schema, destination_gaeb_type=destination_gaeb_type, target_exchange_phase_transform=target_exchange_phase_transform, enforce_strict_offer_phase_long_text_output=enforce_strict_offer_phase_long_text_output)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ExcelConversionApi->excel_conversion_convert_to_gaeb: %s\n" % e)
@@ -170,6 +171,7 @@ Name | Type | Description  | Notes
  **rebuild_item_number_schema** | **bool**| When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. | [optional] 
  **destination_gaeb_type** | **str**| Defaults to GAEB XML V3.2 | [optional] 
  **target_exchange_phase_transform** | **str**| Defaults to none, meaning no transformation will be done | [optional] 
+ **enforce_strict_offer_phase_long_text_output** | **bool**| Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. | [optional] 
 
 ### Return type
 
@@ -182,7 +184,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/problem+json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -240,7 +242,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json, text/json, application/problem+json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
