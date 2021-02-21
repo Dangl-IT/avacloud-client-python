@@ -16,12 +16,12 @@ from __future__ import absolute_import
 import unittest
 
 import avacloud_client_python
-from avacloud_client_python.models.http_status_code import HttpStatusCode  # noqa: E501
+from avacloud_client_python.models.price_component_type_dto import PriceComponentTypeDto  # noqa: E501
 from avacloud_client_python.rest import ApiException
 
 
-class TestHttpStatusCode(unittest.TestCase):
-    """HttpStatusCode unit test stubs"""
+class TestPriceComponentTypeDto(unittest.TestCase):
+    """PriceComponentTypeDto unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,10 +29,10 @@ class TestHttpStatusCode(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testHttpStatusCode(self):
-        """Test HttpStatusCode"""
+    def testPriceComponentTypeDto(self):
+        """Test PriceComponentTypeDto"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = avacloud_client_python.models.http_status_code.HttpStatusCode()  # noqa: E501
+        # model = avacloud_client_python.models.price_component_type_dto.PriceComponentTypeDto()  # noqa: E501
         pass
 
 
