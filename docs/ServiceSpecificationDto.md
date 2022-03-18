@@ -46,6 +46,8 @@ Name | Type | Description | Notes
 **warranty_end** | **datetime** | The date on which the warranty period ends | [optional] 
 **approval_date** | **datetime** | The date on which the services rendered by the bidder are scheduled to be approved by the buyer | [optional] 
 **type_of_approval** | **str** | This should specify how the approval is performed by the buyer. This matches \&quot;AcceptType\&quot; in GAEB | [optional] 
+**addendum_number** | **str** | This optional string property is shared by all IElements, and indicates if the element is part of an addendum, a &#39;Nachtrag&#39; in German. | [optional] 
+**addendum_status** | [**AddendumStatusDto**](AddendumStatusDto.md) | This indicates, if this element is part of an addendum an, if yes, with what status. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
