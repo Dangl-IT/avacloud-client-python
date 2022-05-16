@@ -11,7 +11,7 @@
 """
 
 
-from __future__ import absolute_import
+
 
 import re  # noqa: F401
 
@@ -476,3 +476,4 @@ class GaebConversionApi(object):
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
+

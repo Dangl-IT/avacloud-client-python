@@ -11,7 +11,7 @@
 """
 
 
-from __future__ import absolute_import
+
 
 import unittest
 
@@ -74,3 +74,4 @@ class TestAvaConversionApi(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+

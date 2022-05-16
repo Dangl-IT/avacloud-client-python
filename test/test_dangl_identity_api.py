@@ -11,7 +11,7 @@
 """
 
 
-from __future__ import absolute_import
+
 
 import unittest
 
@@ -68,3 +68,4 @@ class TestDanglIdentityApi(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+

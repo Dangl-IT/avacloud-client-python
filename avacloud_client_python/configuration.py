@@ -11,7 +11,7 @@
 """
 
 
-from __future__ import absolute_import
+
 
 import copy
 import logging
@@ -35,7 +35,7 @@ class Configuration(object):
     def __init__(self):
         """Constructor"""
         if self._default:
-            for key in self._default.__dict__.keys():
+            for key in list(self._default.__dict__.keys()):
                 self.__dict__[key] = copy.copy(self._default.__dict__[key])
             return
 
@@ -257,3 +257,4 @@ class Configuration(object):
                "Version of the API: 1.27.4\n"\
                "SDK Package Version: 1.27.4".\
                format(env=sys.platform, pyversion=sys.version)
+

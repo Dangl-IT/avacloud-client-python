@@ -1,4 +1,4 @@
-from __future__ import absolute_import
+
 
 # flake8: noqa
 
@@ -12,3 +12,4 @@ from avacloud_client_python.api.oenorm_conversion_api import OenormConversionApi
 from avacloud_client_python.api.reb_conversion_api import RebConversionApi
 from avacloud_client_python.api.sia_conversion_api import SiaConversionApi
 from avacloud_client_python.api.status_api import StatusApi
+
