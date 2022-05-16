@@ -37,7 +37,7 @@ Name | Type | Description | Notes
 **name** | **str** | The name of this ServiceSpecification. | [optional] 
 **price_information** | [**PriceInformationDto**](PriceInformationDto.md) | This PriceInformation contains global data for the ServiceSpecification. When inside a Project, do not set this property manually. | [optional] 
 **project_catalogues** | [**list[CatalogueDto]**](CatalogueDto.md) | These are Catalogue that are used within this ElementContainerBase. Catalogue references are used to describe catalogues, or collections, that can be used to describe elements with commonly known properties. For example, QuantityAssignments use these to categorize themselves. | [optional] 
-**catalogue_references** | [**list[CatalogueReferenceDto]**](CatalogueReferenceDto.md) | Referenced catalogues for this QuantityAssignment. | [optional] 
+**catalogue_references** | [**list[CatalogueReferenceDto]**](CatalogueReferenceDto.md) | Referenced catalogues for this ElementContainerBase. | [optional] 
 **planned_execution_start** | **datetime** | The date when the execution of the services is scheduled to start | [optional] 
 **planned_execution_end** | **datetime** | The date then the execution of the services is scheduled to be finished | [optional] 
 **contract_date** | **datetime** | The date on which the contract has been awarded. This matches \&quot;Auftragsdatum\&quot; in GAEB | [optional] 
