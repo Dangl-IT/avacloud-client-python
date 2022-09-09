@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **ignore_child_price_updates** | **bool** | Internally used to indicate that a propagation is currently done, this is done to not recalculate every single result from a lot of changes when it is sufficient to calculate the total price at once. | 
 **deducted_price** | **float** | Net price after applied deductions. | 
 **deduction_factor** | **float** | Factor of applied deductions to the total price. For example, \&quot;0.03\&quot; means that a 3% deduction is to be applied. | 
+**absolute_deduction** | **float** | The exact amount of the discount as an absolute value. For backwards compatibility reasons, setting this value will also set a calculated value to DeductionFactor, which will also be updated in case the total price is changed to reflect a relative value of the absolute discount sum. | [optional] 
 **total_price** | **float** | Will return this ElementContainerBase&#39;s total price. | 
 **total_price_gross** | **float** | The total gross price for this ElementContainerBase including all child elements. | 
 **total_price_gross_deducted** | **float** | Total gross price after applied deductions. | 
@@ -28,8 +29,6 @@ Name | Type | Description | Notes
 **is_lot** | **bool** | This indicates if this group is the parent of a lot. See the documentation for more information about working with lots. | 
 **alternative_to** | **str** | If this group is an alternative for a base group, then this property should point to the id of the group in this service specification that it can replace. If this is an alternative group to a base group, the PriceType should typically be set to \&quot;WithoutTotal\&quot; so this group does not factor into total costs. The PriceType is not changed when this property is set | [optional] 
 **type** | **str** |  | [optional] 
-**project_catalogues** | [**list[CatalogueDto]**](CatalogueDto.md) | These are Catalogue that are used within this ElementContainerBase. Catalogue references are used to describe catalogues, or collections, that can be used to describe elements with commonly known properties. For example, QuantityAssignments use these to categorize themselves. | [optional] 
-**catalogue_references** | [**list[CatalogueReferenceDto]**](CatalogueReferenceDto.md) | Referenced catalogues for this ElementContainerBase. | [optional] 
 **oenorm_properties** | [**OenormPropertiesDto**](OenormPropertiesDto.md) | This class models special properties that only apply to some exchange scenarios where ÖNorm is used. | [optional] 
 **hierarchy_level** | **int** | This is a zero based hierarchy level. It&#39;s set automatically when used in the context of a Project, and can be used to identify the hierarchy level of the current element. | 
 **addendum_status** | [**AddendumStatusDto**](AddendumStatusDto.md) | This indicates, if this element is part of an addendum an, if yes, with what status. | [optional] 

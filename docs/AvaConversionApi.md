@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **ava_conversion_convert_to_gaeb**
-> file ava_conversion_convert_to_gaeb(ava_project, try_auto_generate_item_numbers_and_schema=try_auto_generate_item_numbers_and_schema, destination_gaeb_type=destination_gaeb_type, target_exchange_phase_transform=target_exchange_phase_transform, enforce_strict_offer_phase_long_text_output=enforce_strict_offer_phase_long_text_output, export_quantity_determination=export_quantity_determination, remove_unprintable_characters_from_texts=remove_unprintable_characters_from_texts)
+> file ava_conversion_convert_to_gaeb(ava_project, try_auto_generate_item_numbers_and_schema=try_auto_generate_item_numbers_and_schema, destination_gaeb_type=destination_gaeb_type, target_exchange_phase_transform=target_exchange_phase_transform, enforce_strict_offer_phase_long_text_output=enforce_strict_offer_phase_long_text_output, export_quantity_determination=export_quantity_determination, remove_unprintable_characters_from_texts=remove_unprintable_characters_from_texts, force_include_descriptions=force_include_descriptions)
 
 Converts Dangl.AVA projects to GAEB
 
@@ -152,10 +152,11 @@ target_exchange_phase_transform = 'target_exchange_phase_transform_example' # st
 enforce_strict_offer_phase_long_text_output = true # bool | Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
 export_quantity_determination = true # bool | Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the 'QtyDeterm' (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the 'QuantityComponents' property of positions. Please see the entry for 'Quantity Determination' in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the 'QuantityComponents' property. (optional)
 remove_unprintable_characters_from_texts = true # bool | If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. (optional)
+force_include_descriptions = true # bool | If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
 
 try:
     # Converts Dangl.AVA projects to GAEB
-    api_response = api_instance.ava_conversion_convert_to_gaeb(ava_project, try_auto_generate_item_numbers_and_schema=try_auto_generate_item_numbers_and_schema, destination_gaeb_type=destination_gaeb_type, target_exchange_phase_transform=target_exchange_phase_transform, enforce_strict_offer_phase_long_text_output=enforce_strict_offer_phase_long_text_output, export_quantity_determination=export_quantity_determination, remove_unprintable_characters_from_texts=remove_unprintable_characters_from_texts)
+    api_response = api_instance.ava_conversion_convert_to_gaeb(ava_project, try_auto_generate_item_numbers_and_schema=try_auto_generate_item_numbers_and_schema, destination_gaeb_type=destination_gaeb_type, target_exchange_phase_transform=target_exchange_phase_transform, enforce_strict_offer_phase_long_text_output=enforce_strict_offer_phase_long_text_output, export_quantity_determination=export_quantity_determination, remove_unprintable_characters_from_texts=remove_unprintable_characters_from_texts, force_include_descriptions=force_include_descriptions)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AvaConversionApi->ava_conversion_convert_to_gaeb: %s\n" % e)
@@ -172,6 +173,7 @@ Name | Type | Description  | Notes
  **enforce_strict_offer_phase_long_text_output** | **bool**| Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. | [optional] 
  **export_quantity_determination** | **bool**| Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. | [optional] 
  **remove_unprintable_characters_from_texts** | **bool**| If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. | [optional] 
+ **force_include_descriptions** | **bool**| If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. | [optional] 
 
 ### Return type
 
@@ -249,7 +251,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **ava_conversion_convert_to_reb**
-> file ava_conversion_convert_to_reb(ava_project, try_auto_generate_item_numbers_and_schema=try_auto_generate_item_numbers_and_schema)
+> file ava_conversion_convert_to_reb(ava_project, try_auto_generate_item_numbers_and_schema=try_auto_generate_item_numbers_and_schema, destination_reb_type=destination_reb_type)
 
 Converts Dangl.AVA projects to REB
 
@@ -269,10 +271,11 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = avacloud_client_python.AvaConversionApi(avacloud_client_python.ApiClient(configuration))
 ava_project = avacloud_client_python.ProjectDto() # ProjectDto | The Dangl.AVA project
 try_auto_generate_item_numbers_and_schema = true # bool | If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+destination_reb_type = 'destination_reb_type_example' # str | Defaults to D11 (optional)
 
 try:
     # Converts Dangl.AVA projects to REB
-    api_response = api_instance.ava_conversion_convert_to_reb(ava_project, try_auto_generate_item_numbers_and_schema=try_auto_generate_item_numbers_and_schema)
+    api_response = api_instance.ava_conversion_convert_to_reb(ava_project, try_auto_generate_item_numbers_and_schema=try_auto_generate_item_numbers_and_schema, destination_reb_type=destination_reb_type)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AvaConversionApi->ava_conversion_convert_to_reb: %s\n" % e)
@@ -284,6 +287,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ava_project** | [**ProjectDto**](ProjectDto.md)| The Dangl.AVA project | 
  **try_auto_generate_item_numbers_and_schema** | **bool**| If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. | [optional] 
+ **destination_reb_type** | **str**| Defaults to D11 | [optional] 
 
 ### Return type
 

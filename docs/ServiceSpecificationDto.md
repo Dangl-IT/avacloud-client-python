@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **ignore_child_price_updates** | **bool** | Internally used to indicate that a propagation is currently done, this is done to not recalculate every single result from a lot of changes when it is sufficient to calculate the total price at once. | 
 **deducted_price** | **float** | Net price after applied deductions. | 
 **deduction_factor** | **float** | Factor of applied deductions to the total price. For example, \&quot;0.03\&quot; means that a 3% deduction is to be applied. | 
+**absolute_deduction** | **float** | The exact amount of the discount as an absolute value. For backwards compatibility reasons, setting this value will also set a calculated value to DeductionFactor, which will also be updated in case the total price is changed to reflect a relative value of the absolute discount sum. | [optional] 
 **total_price** | **float** | Will return this ElementContainerBase&#39;s total price. | 
 **total_price_gross** | **float** | The total gross price for this ElementContainerBase including all child elements. | 
 **total_price_gross_deducted** | **float** | Total gross price after applied deductions. | 
