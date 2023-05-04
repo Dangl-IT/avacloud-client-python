@@ -6,10 +6,12 @@ from __future__ import absolute_import
 from avacloud_client_python.api.aslv_conversion_api import AslvConversionApi
 from avacloud_client_python.api.ava_conversion_api import AvaConversionApi
 from avacloud_client_python.api.dangl_identity_api import DanglIdentityApi
+from avacloud_client_python.api.datanorm_conversion_api import DatanormConversionApi
 from avacloud_client_python.api.excel_conversion_api import ExcelConversionApi
 from avacloud_client_python.api.gaeb_conversion_api import GaebConversionApi
 from avacloud_client_python.api.oenorm_conversion_api import OenormConversionApi
 from avacloud_client_python.api.reb_conversion_api import RebConversionApi
 from avacloud_client_python.api.sia_conversion_api import SiaConversionApi
 from avacloud_client_python.api.status_api import StatusApi
+from avacloud_client_python.api.ugl_conversion_api import UglConversionApi
 from avacloud_client_python.api.validation_api import ValidationApi
