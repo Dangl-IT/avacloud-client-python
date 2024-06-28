@@ -4,6 +4,7 @@ All URIs are relative to *https://avacloud-api.dangl-it.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**dangl_identity_get_user_info**](DanglIdentityApi.md#dangl_identity_get_user_info) | **GET** /identity/user-info | 
 [**dangl_identity_login_and_return_token**](DanglIdentityApi.md#dangl_identity_login_and_return_token) | **POST** /identity/token-login | 
 [**dangl_identity_login_with_cookie**](DanglIdentityApi.md#dangl_identity_login_with_cookie) | **POST** /identity/login | 
 [**dangl_identity_refresh_token**](DanglIdentityApi.md#dangl_identity_refresh_token) | **POST** /identity/token-refresh | 
@@ -11,6 +12,51 @@ Method | HTTP request | Description
 [**dangl_identity_request_password_reset**](DanglIdentityApi.md#dangl_identity_request_password_reset) | **POST** /identity/password-forgotten | 
 [**dangl_identity_sign_out_with_sign_in_manager**](DanglIdentityApi.md#dangl_identity_sign_out_with_sign_in_manager) | **DELETE** /identity/login | 
 
+
+# **dangl_identity_get_user_info**
+> UserInfoGet dangl_identity_get_user_info()
+
+
+
+### Example
+```python
+from __future__ import print_function
+import time
+import avacloud_client_python
+from avacloud_client_python.rest import ApiException
+from pprint import pprint
+
+# Configure OAuth2 access token for authorization: Dangl.Identity
+configuration = avacloud_client_python.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = avacloud_client_python.DanglIdentityApi(avacloud_client_python.ApiClient(configuration))
+
+try:
+    api_response = api_instance.dangl_identity_get_user_info()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DanglIdentityApi->dangl_identity_get_user_info: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**UserInfoGet**](UserInfoGet.md)
+
+### Authorization
+
+[Dangl.Identity](../README.md#Dangl.Identity)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json, application/problem+json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dangl_identity_login_and_return_token**
 > TokenResponseGet dangl_identity_login_and_return_token(model)
@@ -252,7 +298,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
- - **Accept**: application/problem+json
+ - **Accept**: text/plain, application/json, text/json, application/problem+json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
